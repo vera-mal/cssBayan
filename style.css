@@ -3,6 +3,7 @@ body {
     font-family: Arial;
     padding: 2em;
     margin: 0;
+    overflow: scroll;
 }
 
 .accordion {
@@ -73,6 +74,11 @@ body {
 @media only screen and (min-width: 820px) {
     body {
         padding: 2.5em 3em;
+    }
+
+    .accordion {
+        max-width: 500px;
+        margin: 0 auto;
     }
 
     .item {
