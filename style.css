@@ -1,0 +1,37 @@
+body {
+    color: #342A21;
+    font-family: Arial;
+    padding: 2em;
+    margin: 0;
+}
+
+.accordion {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.item {
+    border-top: 1px solid #C9B79C;
+    font-weight: bold;
+}
+
+.item:first-child {
+    border-top: 0;
+}
+
+.image {
+    height: 0;
+    overflow: hidden;
+}
+
+.radiobutton {
+    appearance: none;
+}
+
+.radiobutton:checked ~ .image {
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+}
+
