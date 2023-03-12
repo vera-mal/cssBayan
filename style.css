@@ -35,3 +35,36 @@ body {
     object-fit: cover;
 }
 
+@media only screen and (min-width: 320px) {
+    body {
+        padding: 2em;
+    }
+
+    .item {
+        font-size: 1.5em;
+    }
+
+    .radiobutton:checked ~ .image {
+        width: 250px;
+    }
+}
+
+@media only screen and (min-width: 820px) {
+    body {
+        padding: 2.5em 3em;
+    }
+
+    .item {
+        font-size: 2em;
+    }
+
+    .radiobutton:checked ~ .image {
+        width: 300px;
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    .item {
+        font-size: 2.5em;
+    }
+}
