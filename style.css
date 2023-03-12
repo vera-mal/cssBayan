@@ -35,6 +35,24 @@ body {
     object-fit: cover;
 }
 
+.icons {
+    display: inline;
+    position: relative;
+}
+
+.icons i:first-child {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    transition: all .3s ease-in-out;
+}
+
+.radiobutton:checked ~ .icons i:first-child {
+    transform: rotate(90deg);
+}
+
 @media only screen and (min-width: 320px) {
     body {
         padding: 2em;
