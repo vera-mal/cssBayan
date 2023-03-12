@@ -32,7 +32,7 @@ body {
     width: 100%;
     object-fit: cover;
     transition: max-height .3s ease-out;
-    margin-top: 0.25em;
+    margin: 0.25em auto 0;
 }
 
 .radiobutton {
@@ -42,6 +42,12 @@ body {
 
 .radiobutton:checked ~ .image {
     max-height: 300px;
+}
+
+.heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .icons {
@@ -59,7 +65,7 @@ body {
     transition: transform .3s ease-in-out;
 }
 
-.radiobutton:checked ~ .icons i:first-child {
+.radiobutton:checked ~ .heading .icons i:first-child {
     transform: rotate(90deg);
 }
 
@@ -70,6 +76,8 @@ body {
 
     .item {
         font-size: 1.5em;
+        display: flex;
+        flex-direction: column;
     }
 
     .image {
@@ -102,7 +110,7 @@ body {
         visibility: visible;
     }
 
-    .accordion:not(:hover) .radiobutton:checked ~ .title {
+    .accordion:not(:hover) .radiobutton:checked ~ .heading .title {
         color: #DA667B;
     }
 
