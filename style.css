@@ -59,23 +59,14 @@ body {
     justify-content: space-between;
 }
 
-.icons {
+.fa {
     display: inline;
-    position: relative;
     visibility: hidden;
-}
-
-.icons i:first-child {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
     transition: transform .3s ease-in-out;
 }
 
-.radiobutton:checked ~ .heading .icons i:first-child {
-    transform: rotate(90deg);
+.radiobutton:checked ~ .heading .fa {
+    transform: rotate(45deg);
 }
 
 @media only screen and (min-width: 20em) {
@@ -111,7 +102,7 @@ body {
 }
 
 @media (hover: hover) {
-    .accordion:hover .icons {
+    .accordion:hover .fa {
         visibility: visible;
     }
 
@@ -123,7 +114,7 @@ body {
         max-height: 15em;
     }
     
-    .item:hover .icons i:first-child {
-        transform: rotate(90deg);
+    .item:hover .fa {
+        transform: rotate(45deg);
     }
 }
