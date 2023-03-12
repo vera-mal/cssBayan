@@ -15,6 +15,7 @@ body {
 .item {
     border-top: 1px solid #71816D;
     font-weight: bold;
+    padding: 0.5em 0;
 }
 
 .item:first-child {
@@ -22,11 +23,13 @@ body {
 }
 
 .image {
+    display: block;
     max-height: 0;
     overflow: hidden;
     width: 100%;
     object-fit: cover;
     transition: max-height .3s ease-out;
+    margin-top: 0.25em;
 }
 
 .radiobutton {
