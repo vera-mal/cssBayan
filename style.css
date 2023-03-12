@@ -1,0 +1,120 @@
+body {
+    color: #342A21;
+    font-family: Arial;
+    padding: 2em;
+    margin: 0;
+    overflow: scroll;
+}
+
+.accordion {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    max-width: 30em;
+    margin: 0 auto;
+}
+
+.item {
+    border-top: 0.05em solid #71816D;
+    font-weight: bold;
+    padding: 0.5em 0;
+    cursor: pointer;
+}
+
+.item:first-child {
+    border-top: 0;
+}
+
+.item:active {
+    opacity: 0.5;
+}
+
+.image {
+    display: block;
+    max-height: 0;
+    overflow: hidden;
+    width: 100%;
+    object-fit: cover;
+    transition: max-height .3s ease-out;
+    margin: 0.25em auto 0;
+}
+
+.radiobutton {
+    appearance: none;
+    margin: 0;
+}
+
+.radiobutton:checked ~ .image {
+    max-height: 18em;
+}
+
+.title {
+    cursor: pointer;
+}
+
+.heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.fa {
+    display: inline;
+    visibility: hidden;
+    transition: transform .3s ease-in-out;
+}
+
+.radiobutton:checked ~ .heading .fa {
+    transform: rotate(45deg);
+}
+
+@media only screen and (min-width: 20em) {
+    body {
+        padding: 2em;
+    }
+
+    .item {
+        font-size: 1.5em;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .image {
+        width: 15em;
+    }
+}
+
+@media only screen and (min-width: 50em) {
+    body {
+        padding: 2.5em 3em;
+    }
+
+    .item {
+        font-size: 2em;
+    }
+}
+
+@media only screen and (min-width: 120em) {
+    .item {
+        font-size: 2.5em;
+    }
+}
+
+@media (hover: hover) {
+    .accordion:hover .fa {
+        visibility: visible;
+    }
+
+    .accordion:not(:hover) .radiobutton:checked ~ .heading .title {
+        color: #DA667B;
+    }
+
+    .item:hover .image{
+        max-height: 15em;
+    }
+    
+    .item:hover .fa {
+        transform: rotate(45deg);
+    }
+}
