@@ -25,6 +25,10 @@ body {
     border-top: 0;
 }
 
+.item:active {
+    opacity: 0.5;
+}
+
 .image {
     display: block;
     max-height: 0;
